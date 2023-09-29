@@ -14,7 +14,7 @@ from config import (
     BOT_TOKEN,
     MONGO_DB_URI,
     LOGGER_ID,
-    OWNER,
+    OWNER_ID,
     COMMAND_HANDLER,
     SUPPORT_CHANNEL,
     SUPPORT_CHAT,
