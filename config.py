@@ -10,6 +10,9 @@ load_dotenv()
 API_ID = int(getenv("API_ID"))
 API_HASH = getenv("API_HASH")
 
+# OMMAND HANDLER
+COMMAND_HANDLER = ". /".split()
+
 # Get your token from @BotFather on Telegram.
 BOT_TOKEN = getenv("BOT_TOKEN")
 
