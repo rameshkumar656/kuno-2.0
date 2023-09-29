@@ -1,7 +1,7 @@
 from pyrogram import filters
 from pyrogram.types import InlineQueryResultPhoto, InlineKeyboardMarkup, InlineKeyboardButton, InlineQueryResultArticle, InputTextMessageContent
 from pyrogram import enums
-from AnonXMusic import app, LOG_CHANNEL_ID
+from AnonXMusic import app, LOGGER_ID
 from config import COMMAND_HANDLER
 
 
@@ -40,7 +40,7 @@ async def whisper(app, iquery):
       except Exception:
         pass
       text = f"**🔒 Secret whisper for ( @{username} ) .ا**"
-    send = await app.send_message(LOG_CHANNEL_ID, query)
+    send = await app.send_message(LOGGER_ID, query)
     reply_markup = InlineKeyboardMarkup(
       [[
         InlineKeyboardButton("📪 Show whisper", callback_data=f"{send.id}catch{user}from{user_id}")
@@ -98,7 +98,7 @@ async def get_whisper(app,query):
       ]
     )
     if user == "all":
-       msg = await app.get_messages(LOG_CHANNEL_ID, int(query.data.split("catch")[0]))
+       msg = await app.get_messages(LOGGER_ID, int(query.data.split("catch")[0]))
        await query.answer(msg.text, show_alert=True)
        try:
          await query.edit_message_reply_markup(
@@ -110,7 +110,7 @@ async def get_whisper(app,query):
     
     else:
       if str(query.from_user.id) == user:
-        msg = await app.get_messages(LOG_CHANNEL_ID, int(query.data.split("catch")[0]))
+        msg = await app.get_messages(LOGGER_ID, int(query.data.split("catch")[0]))
         await query.answer(msg.text, show_alert=True)
         try:
          await query.edit_message_reply_markup(
@@ -121,7 +121,7 @@ async def get_whisper(app,query):
         return 
 
       if query.from_user.id == from_user:
-        msg = await app.get_messages(LOG_CHANNEL_ID, int(query.data.split("catch")[0]))
+        msg = await app.get_messages(LOGGER_ID, int(query.data.split("catch")[0]))
         await query.answer(msg.text, show_alert=True)
         return
       
