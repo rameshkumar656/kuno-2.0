@@ -1,8 +1,8 @@
 from pyrogram import filters
 from pyrogram.types import InlineQueryResultPhoto, InlineKeyboardMarkup, InlineKeyboardButton, InlineQueryResultArticle, InputTextMessageContent
 from pyrogram import enums
-from HuTao import app, LOG_CHANNEL_ID
-from HuTao.Config import COMMAND_HANDLER
+from AnonXMusic import app, LOG_CHANNEL_ID
+from config import COMMAND_HANDLER
 
 
 @app.on_message(filters.command("whisper", COMMAND_HANDLER))
