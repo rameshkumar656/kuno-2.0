@@ -8,6 +8,17 @@ from .logging import LOGGER
 
 PH_ON = ["https://telegra.ph/file/e5b252be0c8674312f8de.jpg", "https://telegra.ph/file/0aef66a3700da291ce500.jpg", "https://telegra.ph/file/39c569f8609a3dbf58b50.jpg", "https://telegra.ph/file/277d551ca262772ce54bb.jpg", "https://telegra.ph/file/907d0db309c3343b3c2eb.jpg", "https://telegra.ph/file/c2ad64ecf373f9b92a7df.jpg", "https://telegra.ph/file/6f8116af831fdcd878f8f.jpg", "https://telegra.ph/file/722c26f90c499751ce899.jpg", "https://telegra.ph/file/fcf53f590dddab080293d.jpg", "https://telegra.ph/file/e01f211dba12ea04eba30.jpg"]
 
+from Config import (
+    API_HASH,
+    API_ID,
+    BOT_TOKEN,
+    MONGO_DB_URI,
+    LOGGER_ID,
+    OWNER,
+    COMMAND_HANDLER,
+    SUPPORT_CHANNEL,
+    SUPPORT_CHAT,
+    )
 
 dirr()
 git()
