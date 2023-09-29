@@ -7,26 +7,23 @@ from pyrogram import filters
 load_dotenv()
 
 # Get this value from my.telegram.org/apps
-API_ID = int(getenv("API_ID", "20256702"))
+API_ID = int(getenv("API_ID"))
 API_HASH = getenv("API_HASH")
 
 # Get your token from @BotFather on Telegram.
 BOT_TOKEN = getenv("BOT_TOKEN")
 
 # Get your mongo url from cloud.mongodb.com
-MONGO_DB_URI = getenv("MONGO_DB_URI", "")
+MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://champumusicbot:shivanshudeo@cluster0.duonri4.mongodb.net/?retryWrites=true&w=majority")
 
-DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 12000))
-
-SONG_DOWNLOAD_DURATION = int(
-    getenv("SONG_DOWNLOAD_DURATION_LIMIT", "5400")
-)
+DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 120))
+SONG_DOWNLOAD_DURATION = int(getenv("SONG_DOWNLOAD_DURATION_LIMIT", "6969"))
 
 # Chat id of a group for logging bot's activities
-LOGGER_ID = int(getenv("LOGGER_ID", "-1001806181169"))
+LOGGER_ID = int(getenv("LOGGER_ID", None))
 
 # Get this value from @FallenxBot on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID", "5673255098"))
+OWNER_ID = int(getenv("OWNER_ID", "6399386263"))
 
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
@@ -36,18 +33,18 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/TEAMKHUSHI/Bharat",
+    "https://github.com/TheChampu/CruellaV2.0",
 )
-UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
+UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
 GIT_TOKEN = getenv(
-    "GIT_TOKEN", "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"
+    "GIT_TOKEN", "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"
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/its_cute_babu")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/x_team_immortals_x")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/TheShivanshu")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/TeamXBharat")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
-AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
+AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", True))
 
 
 # Get this credentials from https://developer.spotify.com/dashboard
@@ -82,21 +79,21 @@ confirmer = {}
 
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://telegra.ph/file/7d6312574f792e87e3599.mp4"
+    "START_IMG_URL", "https://telegra.ph/file/e5b252be0c8674312f8de.jpg"
 )
 PING_IMG_URL = getenv(
-    "PING_IMG_URL", "https://te.legra.ph/file/b8a0c1a00db3e57522b53.jpg"
+    "PING_IMG_URL", "https://telegra.ph/file/0aef66a3700da291ce500.jpg"
 )
-PLAYLIST_IMG_URL = "https://telegra.ph/file/682929d3b212d315c3e7c.jpg"
-STATS_IMG_URL = "https://te.legra.ph/file/e906c2def5afe8a9b9120.jpg"
-TELEGRAM_AUDIO_URL = "https://te.legra.ph/file/6298d377ad3eb46711644.jpg"
-TELEGRAM_VIDEO_URL = "https://te.legra.ph/file/6298d377ad3eb46711644.jpg"
+PLAYLIST_IMG_URL = "https://telegra.ph/file/39c569f8609a3dbf58b50.jpg"
+STATS_IMG_URL = "https://telegra.ph/file/39c569f8609a3dbf58b50.jpg"
+TELEGRAM_AUDIO_URL = "https://telegra.ph/file/e01f211dba12ea04eba30.jpg"
+TELEGRAM_VIDEO_URL = "https://telegra.ph/file/e01f211dba12ea04eba30.jpg"
 STREAM_IMG_URL = "https://te.legra.ph/file/bd995b032b6bd263e2cc9.jpg"
-SOUNCLOUD_IMG_URL = "https://te.legra.ph/file/bb0ff85f2dd44070ea519.jpg"
-YOUTUBE_IMG_URL = "https://te.legra.ph/file/6298d377ad3eb46711644.jpg"
-SPOTIFY_ARTIST_IMG_URL = "https://te.legra.ph/file/37d163a2f75e0d3b403d6.jpg"
-SPOTIFY_ALBUM_IMG_URL = "https://te.legra.ph/file/b35fd1dfca73b950b1b05.jpg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://te.legra.ph/file/95b3ca7993bbfaf993dcb.jpg"
+SOUNCLOUD_IMG_URL = "https://telegra.ph/file/722c26f90c499751ce899.jpg"
+YOUTUBE_IMG_URL = "https://telegra.ph/file/39c569f8609a3dbf58b50.jpg"
+SPOTIFY_ARTIST_IMG_URL = "https://telegra.ph/file/722c26f90c499751ce899.jpg"
+SPOTIFY_ALBUM_IMG_URL = "https://telegra.ph/file/722c26f90c499751ce899.jpg"
+SPOTIFY_PLAYLIST_IMG_URL = "https://telegra.ph/file/722c26f90c499751ce899.jpg"
 
 
 def time_to_seconds(time):
@@ -106,7 +103,8 @@ def time_to_seconds(time):
 
 DURATION_LIMIT = int(time_to_seconds(f"{DURATION_LIMIT_MIN}:00"))
 SONG_DOWNLOAD_DURATION_LIMIT = int(
-    time_to_seconds(f"{SONG_DOWNLOAD_DURATION}:00"))
+    time_to_seconds(f"{SONG_DOWNLOAD_DURATION}:00")
+)
 
 
 
